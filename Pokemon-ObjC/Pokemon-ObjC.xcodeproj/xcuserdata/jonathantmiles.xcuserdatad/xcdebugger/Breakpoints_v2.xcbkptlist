@@ -10,60 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pokemon-ObjC/PokemonDetailViewController.swift"
-            timestampString = "562276310.279153"
+            timestampString = "562284426.9433089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "updateViews()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Pokemon_ObjC.PokemonDetailViewController.(updateViews in _7AAA463C09C41AABDB0CDA846820CA9D)() -&gt; ()"
-                  moduleName = "Pokemon-ObjC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathantmiles/Desktop/Retakes/Retake%2012/Pokemon-ObjC/Pokemon-ObjC/PokemonDetailViewController.swift"
-                  timestampString = "562276310.4178801"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "2060">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Pokemon_ObjC.PokemonDetailViewController.(updateViews in _7AAA463C09C41AABDB0CDA846820CA9D)() -&gt; ()"
-                  moduleName = "Pokemon-ObjC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathantmiles/Desktop/Retakes/Retake%2012/Pokemon-ObjC/Pokemon-ObjC/PokemonDetailViewController.swift"
-                  timestampString = "562276310.421048"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "63">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pokemon-ObjC/JTMPokemonTableViewController.m"
-            timestampString = "562276356.28733"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "-prepareForSegue:sender:"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

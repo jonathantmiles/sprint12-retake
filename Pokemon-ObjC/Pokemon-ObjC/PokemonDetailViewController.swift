@@ -8,6 +8,16 @@
 
 import UIKit
 
+//class Observer: NSObject {
+//    var observation: NSKeyValueObservation
+//    @objc var pokemon: JTMPokemonObject?
+//    
+//    init(object: JTMPokemonObject) {
+//         = object
+//        super.init()
+//    }
+//}
+
 @objc class PokemonDetailViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
@@ -16,6 +26,10 @@ import UIKit
         if let pokemon = pokemon {
             PokemonAPI.shared.fillInDetails(for: pokemon)
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         observation = observe(\.pokemon, changeHandler: { (object, change) in
             self.updateViews()
@@ -56,25 +70,11 @@ import UIKit
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     // MARK: - Properties
     
-    //let pokemonAPI = PokemonAPI()
-    
-    @objc var pokemon: JTMPokemonObject?
+    @objc dynamic var pokemon: JTMPokemonObject?
     
     var observation: NSKeyValueObservation?
-    
-    //private var image: UIImage?
 
     @IBOutlet weak var spriteImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!

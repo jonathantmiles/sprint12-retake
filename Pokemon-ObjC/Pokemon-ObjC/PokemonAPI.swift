@@ -60,14 +60,16 @@ import Foundation
             
             do {
                 let pokemonDictionary = try JSONSerialization.jsonObject(with: data, options: []) as! Dictionary<String, AnyHashable>
-                pokemon.id = pokemonDictionary["id"] as? NSNumber
-                let pokemonSprites = pokemonDictionary["sprites"] as! Dictionary<String, String>
-                pokemon.spriteURL = URL(string: pokemonSprites["front_default"]!)
-                let pokemonAbilities = pokemonDictionary["abilities"] as! [Dictionary<String, AnyHashable>]
-                for ability in pokemonAbilities {
+                let pokemonSprites = pokemonDictionary["sprites"] as! Dictionary<String, String?>
+                let spriteURLString = pokemonSprites["front_default"]!
+                pokemon.spriteURL = URL(string: spriteURLString!)
+                let abilitiesDictionaries = pokemonDictionary["abilities"] as! [Dictionary<String, AnyHashable>]
+                for dictionary in abilitiesDictionaries {
+                    let ability = dictionary["ability"] as! Dictionary<String, AnyHashable>
                     let name = ability["name"] as! String
                     pokemon.abilities?.append(name)
                 }
+                pokemon.id = pokemonDictionary["id"] as? NSNumber
             } catch {
                 NSLog("Error setting attributes of pokemon inside of JSONSerialization habitat")
                 return
