@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PokemonAPI: NSObject {
+@objc class PokemonAPI: NSObject {
     
     @objc(sharedController) static let shared: PokemonAPI = PokemonAPI()
     
@@ -17,6 +17,7 @@ class PokemonAPI: NSObject {
         URLSession.shared.dataTask(with: baseURL) { (data, _, error) in
             if let error = error {
                 NSLog("Error with dataTask: \(error)")
+                completion(nil, error)
                 return
             }
             guard let data = data else { return }
@@ -24,7 +25,9 @@ class PokemonAPI: NSObject {
             do {
                 let pokemonDictionary: Dictionary<String, AnyHashable> = try JSONSerialization.jsonObject(with: data, options: []) as! Dictionary<String, AnyHashable>
                 
-                self.pokemonArray = pokemonDictionary["results"] as! [JTMPokemonObject]
+                let pokemonArray = pokemonDictionary["results"] as! [JTMPokemonObject]
+                completion(pokemonArray, nil)
+                return
             } catch {
                 NSLog("Error decoding into pokemonArray")
                 return
@@ -60,7 +63,7 @@ class PokemonAPI: NSObject {
         }.resume()
     }
     
-    var pokemonArray = [JTMPokemonObject]()
+    // var pokemonArray = [JTMPokemonObject]()
     
     let baseURL = URL(string: "https://pokeapi.co/api/v2/pokemon/")!
 }

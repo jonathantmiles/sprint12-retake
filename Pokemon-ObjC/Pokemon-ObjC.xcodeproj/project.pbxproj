@@ -15,7 +15,7 @@
 		F8AC67172183819D00372356 /* PokemonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AC67162183819D00372356 /* PokemonAPI.swift */; };
 		F8AC671A2183821100372356 /* JTMPokemonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AC67192183821100372356 /* JTMPokemonObject.m */; };
 		F8AC671D218383DD00372356 /* JTMPokemonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AC671C218383DD00372356 /* JTMPokemonTableViewController.m */; };
-		F8AC672021838F6900372356 /* JTMPokemonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AC671F21838F6900372356 /* JTMPokemonDetailViewController.m */; };
+		F8AC67222183909900372356 /* PokemonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AC67212183909900372356 /* PokemonDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +33,7 @@
 		F8AC67192183821100372356 /* JTMPokemonObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMPokemonObject.m; sourceTree = "<group>"; };
 		F8AC671B218383DD00372356 /* JTMPokemonTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMPokemonTableViewController.h; sourceTree = "<group>"; };
 		F8AC671C218383DD00372356 /* JTMPokemonTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMPokemonTableViewController.m; sourceTree = "<group>"; };
-		F8AC671E21838F6900372356 /* JTMPokemonDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMPokemonDetailViewController.h; sourceTree = "<group>"; };
-		F8AC671F21838F6900372356 /* JTMPokemonDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMPokemonDetailViewController.m; sourceTree = "<group>"; };
+		F8AC67212183909900372356 /* PokemonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +76,10 @@
 				F8AC670E21837CDF00372356 /* main.m */,
 				F8AC67162183819D00372356 /* PokemonAPI.swift */,
 				F8AC67182183821100372356 /* JTMPokemonObject.h */,
-				F8AC671E21838F6900372356 /* JTMPokemonDetailViewController.h */,
-				F8AC671F21838F6900372356 /* JTMPokemonDetailViewController.m */,
 				F8AC67192183821100372356 /* JTMPokemonObject.m */,
 				F8AC671B218383DD00372356 /* JTMPokemonTableViewController.h */,
 				F8AC671C218383DD00372356 /* JTMPokemonTableViewController.m */,
+				F8AC67212183909900372356 /* PokemonDetailViewController.swift */,
 			);
 			path = "Pokemon-ObjC";
 			sourceTree = "<group>";
@@ -160,10 +158,10 @@
 			files = (
 				F8AC671A2183821100372356 /* JTMPokemonObject.m in Sources */,
 				F8AC670F21837CDF00372356 /* main.m in Sources */,
-				F8AC672021838F6900372356 /* JTMPokemonDetailViewController.m in Sources */,
 				F8AC671D218383DD00372356 /* JTMPokemonTableViewController.m in Sources */,
 				F8AC67172183819D00372356 /* PokemonAPI.swift in Sources */,
 				F8AC670121837CDE00372356 /* AppDelegate.m in Sources */,
+				F8AC67222183909900372356 /* PokemonDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
