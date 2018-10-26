@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, nullable) NSArray<NSString *> *abilities;
 @property (nonatomic, nullable) NSURL *spriteURL;
 
+- (instancetype)initWithName:(NSString *)name id:(NSNumber * _Nullable)id spriteURL:(NSURL * _Nullable)spriteURL abilities:(NSArray<NSString *> * _Nullable)abilities;
+
 @end
 
 NS_ASSUME_NONNULL_END

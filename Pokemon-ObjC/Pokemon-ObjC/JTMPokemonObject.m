@@ -10,4 +10,16 @@
 
 @implementation JTMPokemonObject
 
+- (instancetype)initWithName:(NSString *)name id:(NSNumber *)id spriteURL:(NSURL *)spriteURL abilities:(NSArray<NSString *> *)abilities
+{
+    self = [super init];
+    if (self) {
+        _name = name;
+        _id = id;
+        _spriteURL = spriteURL;
+        _abilities = abilities;
+    }
+    return self;
+}
+
 @end

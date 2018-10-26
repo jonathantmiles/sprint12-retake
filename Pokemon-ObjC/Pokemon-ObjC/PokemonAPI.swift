@@ -25,7 +25,19 @@ import Foundation
             do {
                 let pokemonDictionary: Dictionary<String, AnyHashable> = try JSONSerialization.jsonObject(with: data, options: []) as! Dictionary<String, AnyHashable>
                 
-                let pokemonArray = pokemonDictionary["results"] as! [JTMPokemonObject]
+                let pokemonResults = pokemonDictionary["results"] as! [Dictionary<String, String>]
+                
+                var pokemonArray: [JTMPokemonObject] = []
+
+                for result in pokemonResults {
+                    
+                    if let name = result["name"] {
+                        let pokemon = JTMPokemonObject(name: name, id: nil, spriteURL: nil, abilities: nil)
+                        pokemonArray.append(pokemon)
+                    }
+                    
+                }
+                
                 completion(pokemonArray, nil)
                 return
             } catch {

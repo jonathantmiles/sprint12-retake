@@ -23,7 +23,7 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        //_pokemonAPI = [[PokemonAPI alloc] init];
+        _pokemonArray = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -32,7 +32,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        //_pokemonAPI = [[PokemonAPI alloc] init];
+        _pokemonArray = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -47,6 +47,9 @@
 {
     [PokemonAPI.sharedController fetchAllPokemonWithCompletion:^(NSArray<JTMPokemonObject *> * _Nullable pokemonArray, NSError * _Nullable error) {
         [self.pokemonArray setArray:pokemonArray];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
     }];
 }
 
