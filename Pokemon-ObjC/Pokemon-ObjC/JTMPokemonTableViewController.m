@@ -52,7 +52,6 @@
 
 #pragma mark - Table view data source
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.pokemonArray.count;
 }
@@ -66,15 +65,17 @@
     return cell;
 }
 
- 
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    PokemonDetailViewController *destVC = segue.destinationViewController;
+    if ([destVC isKindOfClass: [PokemonDetailViewController class]]) {
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        JTMPokemonObject *pokemon = self.pokemonArray[indexPath.row];
+        [destVC setPokemon:pokemon];
+    }
+    
 }
-*/
+
 
 @end

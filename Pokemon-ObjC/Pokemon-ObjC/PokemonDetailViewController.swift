@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PokemonDetailViewController: UIViewController {
+@objc class PokemonDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,5 +26,9 @@ class PokemonDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - Properties
+    
+    @objc var pokemon: JTMPokemonObject?
 
 }
