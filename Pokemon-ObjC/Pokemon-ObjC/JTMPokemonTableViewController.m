@@ -12,7 +12,7 @@
 
 @interface JTMPokemonTableViewController ()
 
-@property PokemonAPI *pokemonAPI;
+//@property PokemonAPI *pokemonAPI;
 @property NSMutableArray<JTMPokemonObject *> *pokemonArray;
 
 @end
@@ -23,7 +23,7 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        _pokemonAPI = [[PokemonAPI alloc] init];
+        //_pokemonAPI = [[PokemonAPI alloc] init];
     }
     return self;
 }
@@ -32,7 +32,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        _pokemonAPI = [[PokemonAPI alloc] init];
+        //_pokemonAPI = [[PokemonAPI alloc] init];
     }
     return self;
 }
@@ -45,7 +45,7 @@
 
 - (void) updateViews
 {
-    [self.pokemonAPI fetchAllPokemonWithCompletion:^(NSArray<JTMPokemonObject *> * _Nullable pokemonArray, NSError * _Nullable error) {
+    [PokemonAPI.sharedController fetchAllPokemonWithCompletion:^(NSArray<JTMPokemonObject *> * _Nullable pokemonArray, NSError * _Nullable error) {
         [self.pokemonArray setArray:pokemonArray];
     }];
 }

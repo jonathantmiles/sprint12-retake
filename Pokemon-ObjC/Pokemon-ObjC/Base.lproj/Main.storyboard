@@ -97,6 +97,12 @@
                         <viewLayoutGuide key="safeArea" id="6Wo-GM-n6v"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="yhW-oH-oBh"/>
+                    <connections>
+                        <outlet property="abilitiesListLabel" destination="isj-xD-GtN" id="zMg-ID-cad"/>
+                        <outlet property="idLabel" destination="RcX-fW-MYa" id="hyq-jX-MHq"/>
+                        <outlet property="nameLabel" destination="ISp-pf-R9E" id="2MU-ld-VOp"/>
+                        <outlet property="spriteImageView" destination="WKm-zH-9e2" id="rJ5-Tn-Rrs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DdE-Nd-eL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
